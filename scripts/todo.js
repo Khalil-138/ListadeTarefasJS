@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const todoList = document.getElementById('todo-list');
 
     addButton.addEventListener('click', addTodo)
+    document.addEventListener('keypress', (event) => {
+        console.log()
+        if (event.key == 'Enter'){
+            addTodo()
+        }
+    })
 
     function addTodo() {
         const texto = todoInput.value.trim()
